@@ -25,7 +25,7 @@ public class CubeFactory : MonoBehaviour
             Cube newCube = Cube.Instantiate(_prefab, spawnPosition, Quaternion.identity);
             newCube.transform.localScale = parentScale / _scaleDivider;
             newCube.Initialize(parentCube.Split—hance / _chanceDivider);
-            newCube.MeshRenderer.material.color = RandomColor.GetRandomColor();
+            newCube.MeshRenderer.material.color = Utils.GetRandomColor();
 
             newCubes.Add(newCube);
         }

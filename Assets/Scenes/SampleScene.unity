@@ -416,11 +416,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1384768359}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c34d8981517090489b480b3e7b496fe, type: 3}
+  m_Script: {fileID: 11500000, guid: 0b48aebb5f59c304ebba382a472c8bfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _explosionForce: 5000
-  _explosionRadius: 10
+  _explosionForce: 3000
+  _explosionRadius: 100
 --- !u!1 &1455977797
 GameObject:
   m_ObjectHideFlags: 0
