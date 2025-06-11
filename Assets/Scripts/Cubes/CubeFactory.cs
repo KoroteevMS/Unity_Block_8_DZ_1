@@ -9,11 +9,11 @@ public class CubeFactory : MonoBehaviour
     [SerializeField] private int minSpawnCount;
     [SerializeField] private int maxSpawnCount;
 
-    private ColorGenerate _colorGenerate;
+    private ColorGenerator _colorGenerate;
     
     private void Awake()
     {
-        _colorGenerate = new ColorGenerate();
+        _colorGenerate = new ColorGenerator();
     }
 
     public List<Cube> SpawnCubes(Cube parentCube)

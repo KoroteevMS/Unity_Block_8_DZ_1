@@ -5,7 +5,7 @@ public class CubeDivisionHandler : MonoBehaviour
 {
     [SerializeField] private CubeClickHandler _cubeClickHandler;
     [SerializeField] private CubeFactory _cubeFactory;
-    [SerializeField] private ExplosionFactory _explosionFactory;
+    [SerializeField] private Exploader _explosionFactory;
 
     private void Awake()
     {
@@ -28,6 +28,7 @@ public class CubeDivisionHandler : MonoBehaviour
             List<Cube> cubes = _cubeFactory.SpawnCubes(selected—ube);
 
             List<Rigidbody> rigidbodiesCubes = new List<Rigidbody>();
+
             foreach (Cube cube in cubes)
                 rigidbodiesCubes.Add(cube.Rigidbody);
 

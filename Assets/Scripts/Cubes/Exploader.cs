@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ExplosionFactory : MonoBehaviour
+public class Exploader : MonoBehaviour
 {
     [SerializeField] private float _explosionForce;
     [SerializeField] private float _explosionRadius;

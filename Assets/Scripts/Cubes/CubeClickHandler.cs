@@ -26,20 +26,4 @@ public class CubeClickHandler : MonoBehaviour
         if(collider.TryGetComponent(out Cube cube))
             Click?.Invoke(cube);
     }
-
-    /*
-    private void Update()
-    {
-        if (_clickDetector.IsLeftButtonClicked() == false)
-            return;
-
-        if (_raycaster.TryGetRaycastHitCollider(out Collider collider) == false)
-            return;
-
-        _cube = collider.GetComponent<Cube>();
-
-        if (_cube != null)
-            Click?.Invoke(_cube);
-    }
-    */
 }
