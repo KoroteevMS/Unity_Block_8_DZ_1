@@ -6,7 +6,7 @@ public class Cube : MonoBehaviour
 {
     [SerializeField] private float _splitChance;
 
-    public float SplitÑhance => _splitChance;
+    public float SplitChance => _splitChance;
     public Rigidbody Rigidbody { get; private set; }
     public MeshRenderer MeshRenderer { get; private set; }
 

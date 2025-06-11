@@ -9,6 +9,13 @@ public class CubeFactory : MonoBehaviour
     [SerializeField] private int minSpawnCount;
     [SerializeField] private int maxSpawnCount;
 
+    private ColorGenerate _colorGenerate;
+    
+    private void Awake()
+    {
+        _colorGenerate = new ColorGenerate();
+    }
+
     public List<Cube> SpawnCubes(Cube parentCube)
     {
         List<Cube> newCubes = new List<Cube>();
@@ -18,14 +25,14 @@ public class CubeFactory : MonoBehaviour
 
         for (int i = 0; i < cubesSpawnQuantity; i++)
         {
-            Vector3 randomOffset = Random.insideUnitSphere * parentPosition.magnitude / _scaleDivider;
+            Vector3 randomOffset = Random.insideUnitSphere * parentPosition.magnitude * 0.1f;
             randomOffset.y = Mathf.Abs(randomOffset.y);
-            Vector3 spawnPosition = (parentPosition + randomOffset) / _scaleDivider;
+            Vector3 spawnPosition = parentPosition + randomOffset;
 
-            Cube newCube = Cube.Instantiate(_prefab, spawnPosition, Quaternion.identity);
+            Cube newCube = Instantiate(_prefab, spawnPosition, Quaternion.identity);
             newCube.transform.localScale = parentScale / _scaleDivider;
-            newCube.Initialize(parentCube.SplitÑhance / _chanceDivider);
-            newCube.MeshRenderer.material.color = Utils.GetRandomColor();
+            newCube.Initialize(parentCube.SplitChance / _chanceDivider);
+            newCube.MeshRenderer.material.color = _colorGenerate.Generate();
 
             newCubes.Add(newCube);
         }

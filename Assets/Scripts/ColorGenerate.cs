@@ -1,8 +1,8 @@
 using UnityEngine;
 
-public static class Utils
+public class ColorGenerate
 {
-    public static Color GetRandomColor()
+    public Color Generate()
     {
         float minColor = 0.5f;
         float maxColor = 1f;
