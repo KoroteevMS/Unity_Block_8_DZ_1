@@ -720,8 +720,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b48aebb5f59c304ebba382a472c8bfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _explosionForce: 500
-  _explosionRadius: 20
+  _explosionForce: 600
+  _explosionRadius: 5
 --- !u!1 &1455977797
 GameObject:
   m_ObjectHideFlags: 0
@@ -1154,6 +1154,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -738846002531580993, guid: 96e560062a501cd40b839f96fcc2b9a3, type: 3}
+      propertyPath: _splitChance
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 3822899357344028289, guid: 96e560062a501cd40b839f96fcc2b9a3, type: 3}
       propertyPath: m_Mass
       value: 0.1
