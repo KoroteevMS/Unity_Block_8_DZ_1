@@ -32,7 +32,11 @@ public class CubeDivisionHandler : MonoBehaviour
             foreach (Cube cube in cubes)
                 rigidbodiesCubes.Add(cube.Rigidbody);
 
-            _explosionFactory.Explode(rigidbodiesCubes, selected—ube.transform.position);
+            _explosionFactory.Explode(selected—ube.transform.position, rigidbodiesCubes);
+        }
+        else
+        {
+            _explosionFactory.Explode(selected—ube.transform.position, selected—ube.transform.localScale.magnitude);
         }
 
         Destroy(selected—ube.gameObject);
